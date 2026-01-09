@@ -1,4 +1,4 @@
-# 日志分析系统 (Log Analysis System)
+# 日志分析系统 (SparkLog-Insight-Platform)
 
 ## 项目概述
 
