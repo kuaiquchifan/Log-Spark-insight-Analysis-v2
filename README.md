@@ -1,5 +1,8 @@
-# 日志分析系统 (Log-Spark-insight-Analysis)
+<div align="right">
+  <a href="README_EN.md"><button>English</button></a>
+</div>
 
+# 日志分析系统 (Log-Spark-insight-Analysis)
 ## 项目概述
 
 这是一个基于 Apache Spark 的日志分析系统，用于处理和分析大规模 HTTP 访问日志数据。系统可以生成模拟日志、执行多维度分析，并输出详细的分析报告。
@@ -61,5 +64,12 @@ python log_analysis.py
 自动打开 Spark Web UI（http://localhost:4040）
 输出分析结果到控制台
 生成详细报告文件：analysis_results.txt
+
+## 许可协议
+本项目采用开源模式，遵循 **Apache 2.0** 许可协议。
+
+## 作者与鸣谢
+作者：Junliang Li 
+邮箱：940747544@qq.com
 
 
