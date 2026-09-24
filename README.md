@@ -1,75 +1,129 @@
-<div align="right">
-  <a href="README_EN.md"><button>English</button></a>
-</div>
+[![English](https://img.shields.io/badge/README-English-2ea44f?style=for-the-badge)](README.md)
+[![中文](https://img.shields.io/badge/README-中文-ffb703?style=for-the-badge)](README_zh.md)
 
-# 日志分析系统 (Log-Spark-insight-Analysis)
-## 项目概述
+# Log Analysis System (Log-Spark-insight-Analysis)
 
-这是一个基于 Apache Spark 的日志分析系统，用于处理和分析大规模 HTTP 访问日志数据。系统可以生成模拟日志、执行多维度分析，并输出详细的分析报告。
+## Project Overview
 
-## 功能特性
+This is a log analysis system built on Apache Spark for processing and analyzing large-scale HTTP access log data. The system can generate simulated logs, perform multi-dimensional analysis, and output detailed analytical reports.
 
-### 1. 日志数据生成 (`generate_logs.py`)
-- 生成 100,000 条模拟 HTTP 访问日志
-- 包含字段：时间戳、IP、HTTP 方法、路径、状态码、响应时间、用户代理
-- 支持自定义记录数量
+## Features
 
-### 2. 日志分析 (`log_analysis.py`)
-提供以下分析功能：
+### 1. Log Data Generation (`generate_logs.py`)
 
-#### 基础统计
-- HTTP 状态码分布
-- 访问最频繁的 API 路径
-- 响应时间统计（平均、最大、最小）
-- 各 HTTP 方法的请求数
-- 用户代理分布
+- Generates 100,000 simulated HTTP access logs
+- Includes fields: timestamp, IP, HTTP method, path, status code, response time, user agent
+- Supports customizable record count
 
-#### 高级分析
-- **时间序列分析**：按小时、按日期统计请求数和错误率
-- **异常检测**：识别请求数异常高的 IP（基于 3σ 原则）
-- **用户行为分析**：
-  - 用户访问路径分析（Top 20）
-  - 用户会话分析（Top 10）
-- **性能瓶颈分析**：
-  - 最慢的 API 端点（Top 20）
-  - 响应时间分布
-- **错误分析**：
-  - 错误请求分析（Top 20）
-  - 错误率统计
+### 2. Log Analysis (`log_analysis.py`)
 
-## 环境要求
+Provides the following analytical capabilities:
 
-### 系统要求
+#### Basic Statistics
+
+- HTTP status code distribution
+- Most frequently accessed API paths
+- Response time metrics (average, maximum, minimum)
+- Request counts by HTTP method
+- User agent distribution
+
+Advanced Analytics
+
+- **Time Series Analysis**: Hourly and daily statistics on request volume and error rates
+- **Anomaly Detection**: Identify IPs with abnormally high request volumes (based on the 3σ principle)
+- **User Behavior Analysis**:
+  - User access path analysis (Top 20)
+  - User session analysis (Top 10)
+- **Performance Bottleneck Analysis**:
+  - Slowest API endpoints (Top 20)
+  - Response time distribution
+- **Error Analysis**:
+  - Top 20 error requests
+  - Error rate statistics
+
+## Environment Requirements
+
+### System Requirements
+
 - Python 3.11+
 - Java JDK 17 LTS
 - Apache Spark 3.5.7+
 
-### Python 依赖
+### Python Dependencies
+
 ```bash
 pip install pyspark
 ```
 
-## 使用方法
-1. 生成日志数据
+## Usage
+
+1. Generate log data
+
 ```bash
 python generate_logs.py
 ```
-输出：access_logs.csv（100,000 条日志记录）
 
-2. 执行日志分析
+Output: access_logs.csv (100,000 log records)
+
+2. Execute log analysis
+
 ```bash
 python log_analysis.py
 ```
 
-自动打开 Spark Web UI（http://localhost:4040）
-输出分析结果到控制台
-生成详细报告文件：analysis_results.txt
+Advanced Analytics
 
-## 许可协议
-本项目采用开源模式，遵循 **Apache 2.0** 许可协议。
+- **Time Series Analysis**: Hourly and daily statistics on request volume and error rates
+- **Anomaly Detection**: Identify IPs with abnormally high request volumes (based on the 3σ principle)
+- **User Behavior Analysis**:
+  - User access path analysis (Top 20)
+  - User session analysis (Top 10)
+- **Performance Bottleneck Analysis**:
+  - Slowest API endpoints (Top 20)
+  - Response time distribution
+- **Error Analysis**:
+  - Top 20 error requests
+  - Error rate statistics
 
-## 作者与鸣谢
-作者：Junliang Li 
-邮箱：940747544@qq.com
+## Environment Requirements
 
+### System Requirements
 
+- Python 3.11+
+- Java JDK 17 LTS
+- Apache Spark 3.5.7+
+
+### Python Dependencies
+
+```bash
+pip install pyspark
+```
+
+## Usage
+
+1. Generate log data
+
+```bash
+python generate_logs.py
+```
+
+Output: access_logs.csv (100,000 log records)
+
+2. Execute log analysis
+
+```bash
+python log_analysis.py
+```
+
+Automatically opens Spark Web UI (http://localhost:4040)
+Outputs analysis results to console
+Generates detailed report file: analysis_results.txt
+
+## License
+
+This project is open source and available under the **Apache 2.0** License.
+
+## Authors and Acknowledgments
+
+Author: Junliang Li   
+Email: 940747544@qq.com
