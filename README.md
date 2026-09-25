@@ -1,7 +1,7 @@
 [![English](https://img.shields.io/badge/README-English-2ea44f?style=for-the-badge)](README.md)
 [![中文](https://img.shields.io/badge/README-中文-ffb703?style=for-the-badge)](README_zh.md)
 
-# Log-Spark-Insight-Analysis-v2
+# HTTP-Log-Spark-Analysis
 
 A distributed log analysis platform built with Apache Spark and Hadoop, designed to process and analyze large-scale HTTP access logs. The project includes simulated log generation, dimension-table construction, batch analytics, anomaly detection, and an interactive dashboard built with Streamlit.
 
@@ -22,7 +22,7 @@ The system is suitable for learning, experimentation, and prototyping enterprise
 ## Project Structure
 
 ```bash
-Log-Spark-Insight-Analysis-v2
+HTTP-Log-Spark-Analysis
 ├── 01_generate_geo_dim_data.ipynb                  # Generates geographic dimension data (01_geo_dim.parquet)
 ├── 02_generate_url_category_dim_data.ipynb         # Generates URL/path category dimension data
 ├── 03_generate_http_logs_data_v2.ipynb             # Generates HTTP access log samples
@@ -75,6 +75,17 @@ PostgreSQL 16
 OpenJDK 8
 
 ## Installation Guide
+
+### Download the project and open the folder
+```bash
+git clone <repository-url>
+cd HTTP-Log-Spark-Analysis\
+```
+### Create and activate a virtual environment in Miniconda
+```bash
+conda create -n <your-venv-name> python=3.11
+conda activate <your-venv-name>
+```
 
 #### Install Python Dependencies
 

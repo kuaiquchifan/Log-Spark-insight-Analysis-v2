@@ -1,7 +1,7 @@
 [![English](https://img.shields.io/badge/README-English-2ea44f?style=for-the-badge)](README.md)
 [![中文](https://img.shields.io/badge/README-中文-ffb703?style=for-the-badge)](README_zh.md)
 
-# 网络日志分析系统 (Log-Spark-Insight-Analysis-v2)
+# 网络日志分析系统 (HTTP-Log-Spark-Analysis)
 
 ## 项目概述
 
@@ -10,7 +10,7 @@
 ## 项目结构和功能特性
 
 ```bash
-Log-Spark-Insight-Analysis-v2
+HTTP-Log-Spark-Analysis
 ├── 01_generate_geo_dim_data.ipynb 				# 生成地理维表（01_geo_dim.parquet），包含国家代码、名称、地区、大洲及风险标记。
 ├── 02_generate_url_category_dim_data.ipynb 	# 生成 URL/路径类别维表（parquet/csv），用于为日志路径打标签或分组。 
 ├── 03_generate_http_logs_data_v2.ipynb  		# 生成更丰富的 HTTP 日志样例（含时间、IP、方法、路径、状态码、响应时长、user-agent 等），保存到 output。
@@ -75,7 +75,7 @@ Log-Spark-Insight-Analysis-v2
 
 ```bash
 git clone <repository-url>
-cd Log-Spark-Insight-Analysis-v2\
+cd HTTP-Log-Spark-Analysis\
 ```
 
 ### 在miniconda创建并激活虚拟环境
